@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Masjid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- content -->
+    <section class="masjid">
+        
+        <div class="row ">
+          
+            <div class="shalat col-sm-6">
+              
+                <a class="navbar-brand text" href="#"><i class='fas fa-mosque' style='font-size:40px;'></i> MASJID AGUNG <br><span class="lokasi">Jonggol, Kabupaten Bogor, Jawa Barat</span>
+                </a>
+                <h1 id="jam">10:50</h1>
+                <!-- <p class="tgl" id="hari"></p> -->
+                <p class="tgl" id="hijriyah">
+                  <script class="tanggalnya"
+                  src='https://cdn.statically.io/gh/ikhwanfillah-sc/datehijriah/f168d7d0/datehijri.js'>
+              </script>
+              </p>
+                <h5 class="waktu">Subuh<span class="subuh" id="subuh">12.00</span></h5>
+                <h5 class="waktu">Dzuhur<span class="dzuhur" id="dzuhur">12.00</span></h5>
+                <h5 class="waktu">Ashar<span class="ashar" id="ashar">12.00</span></h5>
+                <h5 class="waktu">Maghrib<span class="magrib" id="magrib">12.00</span></h5>
+                <h5 class="waktu">Isya<span class="isya" id="isya">12.00</span></h5>
+            </div>
+
+            <div class="hadits col-sm-6">
+
+              <!-- fulscreen -->
+              <a href="#" class="full" id="full">
+                <svg onclick="toggleFullScreen ();" name='fullscreen' xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen yaa"
+                viewBox="0 0 16 16" style="cursor: pointer;">
+                <path fill-rule="evenodd"
+                    d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+            </svg>
+            </a>
+            <!-- end full scren  -->
+            
+              <div class="motivasi shadow-lg-2">
+                <h6>سَوُّوْا صُفُوْفَكُمْ فَإِنَّ تَسْوِيَةَ الصَّفِّ مِنْ تَمَامِ الصَّلاَةِ</h6>
+              <p class="desc"><i>“Luruskan shaf-shaf kalian, karena sesungguhnya meluruskan shaf termasuk kesempurnaan sholat”</i></p>
+              </div>
+              
+              
+            </div>
+        </div>
+        
+        
+        <marquee behavior="" direction="">Selamat Datang di website display Masjid Agung. Ini adalah info jadwal Shalat. Shalatlah sebelum di shalatkan. Shalat adalah tiangnya agama.
+          Yuk Kita Shalat !
+        </marquee>
+
+    </section>
+    <!-- ennd content -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hijri-date/0.5.2/hijri.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- fullscreen -->
+    <script>
+      const toggler = document.getElementById('full')
+      const post = document.getElementById('post')
+
+      toggler.addEventListener('click', () => {
+        if(document.fullscreenElement){
+          document.exitFullscreen();
+          toggler.textContent = ""
+        }else{
+          document.documentElement.requestFullscreen();
+          toggler.textContent = ""
+        }
+        
+      });
+
+      document.addEventListener('fullscreenchange', () => {
+        if(document.fullscreenElement){
+          // toggler.textContent = "Exit fullscreen"
+
+        }else{
+          toggler.textContent = ""
+        }
+      })
+    </script>
+
+    <!-- jam otomatis -->
+    <script>
+      function updateJam() {
+          var sekarang = new Date();
+          var jam = sekarang.getHours();
+          var menit = sekarang.getMinutes();
+          var detik = sekarang.getSeconds();
+          var waktu = jam + ":" + menit + ":" + detik;
+          document.getElementById("jam").innerHTML = waktu;
+      }
+
+      // Memperbarui tampilan setiap detik
+      setInterval(updateJam, 1000);
+  </script>
+
+  <!-- hari otomatis -->
+  <script>
+    function tampilkanTanggalLengkap() {
+        var sekarang = new Date();
+        var hari = sekarang.toLocaleString('id-ID', { weekday: 'long' });
+        var tanggal = sekarang.getDate();
+        var bulan = sekarang.toLocaleString('id-ID', { month: 'long' });
+        var tahun = sekarang.getFullYear();
+
+        var tanggalLengkap = hari + ', ' + tanggal + ' ' + bulan + ' ' + tahun;
+        
+        document.getElementById("hari").innerHTML = tanggalLengkap;
+    }
+
+    // Memanggil fungsi tampilkanTanggalLengkap saat halaman dimuat
+    tampilkanTanggalLengkap();
+</script>
+
+<!-- jadwal shalat -->
+<script>
+  function getJadwalSholat() {
+    fetch('https://api.banghasan.com/sholat/format/json/jadwal/kota/682/tanggal/2022-12-27')
+    .then(response => response.json())
+    .then(data => {
+        const jadwal = data.jadwal.data;
+        document.getElementById("subuh").innerHTML = jadwal.subuh;
+        document.getElementById("dzuhur").innerHTML = jadwal.dzuhur;
+        document.getElementById("ashar").innerHTML = jadwal.ashar;
+        document.getElementById("magrib").innerHTML = jadwal.maghrib;
+        document.getElementById("isya").innerHTML = jadwal.isya;
+        document.getElementById("tanggal").innerHTML = jadwal.tanggal;
+    })
+}
+setInterval(getJadwalSholat,500);
+// getJadwalSholat();
+
+</script>
+
+<script src="js/script.js"></script>
+
+    
+  </body>
+</html>
+  </body>
+</html>
